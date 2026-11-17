@@ -1,0 +1,20 @@
+{"commands": [
+  {"command": "parameters.change", "params": {"name": "len_x", "expression": "60 mm", "comment": "plate length"}},
+  {"command": "parameters.change", "params": {"name": "len_y", "expression": "40 mm", "comment": "plate width"}},
+  {"command": "parameters.change", "params": {"name": "thk", "expression": "6 mm", "comment": "plate thickness"}},
+  {"command": "parameters.change", "params": {"name": "hole_dia", "expression": "5.5 mm", "comment": "M5 clearance hole"}},
+  {"command": "parameters.change", "params": {"name": "edge_off", "expression": "5 mm", "comment": "hole centre from edge"}},
+
+  {"command": "sketch.create", "params": {"plane": "XY", "name": "PlateOutline"}},
+  {"command": "sketch.rectangle.two_point", "params": {"p0": [0, 0], "p1": ["len_x", "len_y"]}},
+  {"command": "sketch.finish", "params": {}},
+  {"command": "solid.extrude", "params": {"distance": "thk", "direction": "positive", "body_name": "BasePlate"}},
+
+  {"command": "sketch.create", "params": {"plane": "XY", "name": "M5Holes"}},
+  {"command": "sketch.circle.center", "params": {"center": ["edge_off", "edge_off"], "diameter": "hole_dia"}},
+  {"command": "sketch.circle.center", "params": {"center": ["len_x - edge_off", "edge_off"], "diameter": "hole_dia"}},
+  {"command": "sketch.circle.center", "params": {"center": ["len_x - edge_off", "len_y - edge_off"], "diameter": "hole_dia"}},
+  {"command": "sketch.circle.center", "params": {"center": ["edge_off", "len_y - edge_off"], "diameter": "hole_dia"}},
+  {"command": "sketch.finish", "params": {}},
+  {"command": "solid.extrude", "params": {"through_all": true, "direction": "positive", "operation": "cut"}}
+]}

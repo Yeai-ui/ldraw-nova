@@ -8,6 +8,8 @@
 > - **我的复现笔记与脚本** → [`my-reproduction/`](my-reproduction/)
 > - 复现内容：Docker 部署全流程、魔搭免费池模型适配（Intern-S2-Preview）、
 >   首次 AI 建模跑通（`output/tiny-car.mpd`）、工具链探测脚本
+> - **工具链集成**：SolidCraft 0.27.0 MCP 外挂（AI 生成机械零件，`.sc`→`.step`/`.stl` 导出）
+>   + 本地 Blender 4.2.9 视频管线（装配动画渲染，见 `my-reproduction/outputs/videos/`）
 > - 我**只新增了 `my-reproduction/` 目录**，未修改上游任何代码
 >
 > 以下为原作者 README 原文（保留完整以便对照）。

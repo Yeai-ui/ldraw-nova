@@ -1,0 +1,71 @@
+{
+  "bodies": [
+    {
+      "area_mm2": 9215.318765531298,
+      "bbox": {
+        "max": [
+          40.0,
+          0.0,
+          8.881784197001252e-16
+        ],
+        "min": [
+          0.0,
+          -60.0,
+          -30.0
+        ]
+      },
+      "center_of_mass": [
+        13.258846603210037,
+        -30.0,
+        -8.783624140148762
+      ],
+      "closed": true,
+      "density_g_cm3": 1.29,
+      "edges": 27,
+      "face_types": {
+        "cylinder": 3,
+        "plane": 8
+      },
+      "faces": 11,
+      "kernel": {
+        "edges": 31,
+        "faces": 11,
+        "shells": 1,
+        "vertices": 22
+      },
+      "mass_g": 28.877101822679503,
+      "material": "Default",
+      "name": "Bracket",
+      "vertices": 18,
+      "volume_mm3": 22385.35025013915
+    }
+  ],
+  "body_count": 1,
+  "params": [],
+  "sketches": [],
+  "timeline": [
+    {
+      "boolean_diagnostics": {
+        "events": [],
+        "truncated": false
+      },
+      "error": null,
+      "id": 3,
+      "ms": 0.1561,
+      "name": "bracket",
+      "rolled_back": false,
+      "suppressed": false,
+      "type": "BaseFeature",
+      "warning": null
+    }
+  ],
+  "total": {
+    "area_mm2": 9215.318765531298,
+    "edges": 27,
+    "faces": 11,
+    "mass_g": 28.877101822679503,
+    "open_bodies_skipped": 0,
+    "vertices": 18,
+    "volume_mm3": 22385.35025013915
+  }
+}
