@@ -8,8 +8,11 @@
 > - **我的复现笔记与脚本** → [`my-reproduction/`](my-reproduction/)
 > - 复现内容：Docker 部署全流程、魔搭免费池模型适配（Intern-S2-Preview）、
 >   首次 AI 建模跑通（`output/tiny-car.mpd`）、工具链探测脚本
-> - **工具链集成**：SolidCraft 0.27.0 MCP 外挂（AI 生成机械零件，`.sc`→`.step`/`.stl` 导出）
->   + 本地 Blender 4.2.9 视频管线（装配动画渲染，见 `my-reproduction/outputs/videos/`）
+> - **✨ AI 能力亮点：LLM 驱动参数化 CAD 建模**——纯对话驱动、零人工建模，
+>   通过 SolidCraft 0.27.0 MCP 外挂让大模型直接生成可制造机械零件
+>   （衬套 / 板件 M5 孔 / 齿轮 / 手柄变体等，`.sc` 参数化场景 → `.step` / `.stl` 实体导出），
+>   **附 AI 渲染截图与全过程说明 → [`my-reproduction/README.md`](my-reproduction/README.md)**
+> - **视频管线**：本地 Blender 4.2.9 装配动画渲染（见 `my-reproduction/outputs/videos/`）
 > - 我**只新增了 `my-reproduction/` 目录**，未修改上游任何代码
 >
 > 以下为原作者 README 原文（保留完整以便对照）。

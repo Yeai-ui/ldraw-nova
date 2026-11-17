@@ -42,15 +42,28 @@
 生成链路：**LeoCAD 渲染逐帧 → 本地 Blender 4.2.9（`render_video_blender.py` / `make_assembly_video.py` 调用）合成视频**。
 Blender 与 SolidCraft 软件本体不随仓库分发，请自行下载安装。
 
-#### outputs/solidcraft/ — SolidCraft MCP 联动产出
+### ✨ AI 应用能力：LLM 驱动的参数化 CAD 建模（SolidCraft MCP）
 
-通过 **SolidCraft 0.27.0**（Apache-2.0 / MIT，本地 portable 运行）以 MCP 外挂方式
-驱动 AI 生成机械零件，含源文件 `.sc`、导出 `.step` / `.stl` 与渲染截图：
+**全程纯对话驱动、零人工建模**：用大模型通过 **SolidCraft 0.27.0 MCP 外挂**
+（Apache-2.0 / MIT，本地 portable 运行）直接生成可制造的机械零件。
+工作流：自然语言需求 → LLM 生成参数化 `.sc` 场景 → 求解器装配校验 → 一键导出 `.step` / `.stl`（可直接进 CAM / 3D 打印）。
 
-- Step01_Bushing（衬套）、plate_60x40x6_m5（板件 + M5 孔）、Gear m2 z20（齿轮）、
-  handle（手柄系列实验）、window_tour 等
-- `bracket.step` / `bracket.stl`：与 ldraw-nova 产出联动的实体导出
-- 注：部分涉及机密的模具类产出（part03 系列）未上传，仅保留在本地。
+| AI 生成零件 | 建模要点 | 导出格式 |
+|---|---|---|
+| Step01_Bushing 衬套 | 含倒角工艺处理，另做了倒角抑制对比实验 | `.sc` + 渲染图 |
+| plate_60x40x6_m5 板件 | 60×40×6 板材 + M5 螺纹孔，参数全部由 LLM 生成 | `.step` / `.stl` |
+| Gear m2 z20 齿轮 | 模数 2、齿数 20 的参数化齿轮 | `.sc` |
+| handle 手柄系列 | L90/T180 多参数变体迭代 + 导轨装配实验 | `.sc` / `.step` |
+| bracket 支架 | 与 ldraw-nova 产出联动，走完"AI 建模 → 实体导出"全链路 | `.step` / `.stl` |
+
+AI 生成效果截图（LLM 生成、SolidCraft 渲染，无人工修型）：
+
+![衬套倒角实验](outputs/solidcraft/ai-builds/bushing_chamfer_suppressed.png)
+![手柄最终效果](outputs/solidcraft/ai-builds/handle_final_iso.png)
+![板件 M5 孔](outputs/solidcraft/ai-builds/plate_60x40x6_m5.png)
+
+更多产出见 [`outputs/solidcraft/ai-builds/`](outputs/solidcraft/ai-builds/)。
+注：部分涉及机密的模具类产出（part03 系列）未上传，仅保留在本地。
 
 #### outputs/scripts/ — 建模与视频脚本
 
