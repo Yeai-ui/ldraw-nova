@@ -1,5 +1,19 @@
 # ldraw-nova
 
+> ## 📌 我的复现（Yeai-ui 的 Fork）
+>
+> 本仓库是 [anteloc/ldraw-nova](https://github.com/anteloc/ldraw-nova) v0.6.0 的 **Fork**，
+> 用于在 Windows + Docker（国内网络环境）+ 魔搭 ModelScope 免费模型池下复现该项目。
+>
+> - **我的复现笔记与脚本** → [`my-reproduction/`](my-reproduction/)
+> - 复现内容：Docker 部署全流程、魔搭免费池模型适配（Intern-S2-Preview）、
+>   首次 AI 建模跑通（`output/tiny-car.mpd`）、工具链探测脚本
+> - 我**只新增了 `my-reproduction/` 目录**，未修改上游任何代码
+>
+> 以下为原作者 README 原文（保留完整以便对照）。
+
+---
+
 **Give an AI agent a model idea. Guide it, let it build it, and get an LDraw LEGO© model.**
 
 What you get when the building process finishes:
